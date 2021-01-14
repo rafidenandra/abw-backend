@@ -22,6 +22,10 @@ const db = knex({
 	connection: {
 		connectionString: process.env.DATABASE_URL,
 		ssl: true,
+		// host : '127.0.0.1',
+		// user : 'postgres',
+		// password : 'database',
+		// database : 'projek-abw'
 	}
 });
 
