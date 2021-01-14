@@ -1,3 +1,5 @@
+// require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt-nodejs");
@@ -28,7 +30,6 @@ const db = knex({
 app.get("/", (req, res) => {
 	res.send("Welcome");
 });
-
 app.post("/signin", signin.handleSignIn(db, bcrypt));
 app.post("/register", register.handleRegister(db, bcrypt));
 app.get("/profile/:id", profile.handleProfile(db));
@@ -41,7 +42,7 @@ app.get("*", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, function(){
-	console.log(`App is running on port ${process.env.PORT}`);
+	console.log("Server starts");
 });
 
 // app.listen(3000, function(){
