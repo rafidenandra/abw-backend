@@ -40,10 +40,10 @@ app.get("*", (req, res) => {
 	res.send("Sorry, there's nothing here :(");
 });
 
-// app.listen(process.env.PORT || 3001, function(){
+app.listen(process.env.PORT || 3000, function(){
+	console.log(`App is running on port ${process.env.PORT}`);
+});
+
+// app.listen(3000, function(){
 // 	console.log("server starts");
 // });
-
-app.listen(3000, function(){
-	console.log("server starts");
-});
